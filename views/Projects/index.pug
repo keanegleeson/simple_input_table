@@ -15,6 +15,7 @@ block content
           th End Date 
           th Usage 
           th Additionality? (y/n)
+          th Edit/Delete
           
       each project in projects 
         project
@@ -25,4 +26,7 @@ block content
             td= project.start_date
             td= project.end_date 
             td= project.usage 
-            td= project.additionality 
+            td= project.additionality
+            td
+              a( class="btn-new-edit" href="/projects/" + project.id + "/edit") Edit
+              a( class="btn-new-delete" href="/projects/" + project.id + "/delete") Delete

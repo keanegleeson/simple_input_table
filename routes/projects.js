@@ -56,7 +56,7 @@ router.get("/:id/edit", asyncHandler(async(req, res) => {
 router.get("/:id", asyncHandler(async (req, res) => {
   const project = await Project.findByPk(req.params.id);
   if(project) {
-    res.render("projects/show", { project, title: project.title });  
+    res.render("projects/index", { project, title: project.title });  
   } else {
     res.sendStatus(404);
   }

@@ -35,3 +35,28 @@ html {
       input[type="text"] {
         width: 8vw;
     }
+
+
+    /* edit/delete button styling */
+
+    .btn-new-edit {
+      color:white;
+      background-color: #0087cd;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      margin-right: 10px;
+       }
+    
+    .btn-new-edit:hover {
+      color: white;
+      background-color: #71cbf4; }
+
+    .btn-new-delete {
+      color:white;
+      background-color: #dc0a0a;
+      padding: 0.5em 1em;
+      border-radius: 6px; }
+    
+    .btn-new-delete:hover {
+      color: white;
+      background-color:#fca09c; }

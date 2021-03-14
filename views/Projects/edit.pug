@@ -1,0 +1,18 @@
+form(action="/projects/"+ project.id+"/edit", method="post")
+    h1 Add a Project
+    p
+      label(for="project_name")| Project Name: 
+      input(type='text', name='project_name', value=project.project_name)
+      |          Technology: 
+      input(type='text', name='technology', value=project.technology)
+      |          Purchase Type: 
+      input(type='text', name='purchase_type', value=project.purchase_type)
+      |          Start Date: 
+      input(type='text', name='start_date', value=project.start_date)
+      |          End Date: 
+      input(type='text', name='end_date', value=project.end_date)
+      |          Usage: 
+      input(type='text', name='usage', value=project.usage)
+      |          Additionality? (y/n): 
+      input(type='text', name='additionality', value=project.additionality)
+    input(type='submit')
