@@ -2,3 +2,27 @@ extends ../layout
 
 block content
   div.subheader
+    h2 Projects 
+
+
+    table#projects 
+      thead(style='width:100%', border='1')
+        tr
+          th Project Name 
+          th Technology 
+          th Purchase Type 
+          th Start Date 
+          th End Date 
+          th Usage 
+          th Additionality? (y/n)
+          
+      each project in projects 
+        project
+          tr
+            td= project.project_name
+            td= project.technology 
+            td= project.purchase_type 
+            td= project.start_date
+            td= project.end_date 
+            td= project.usage 
+            td= project.additionality 

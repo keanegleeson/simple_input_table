@@ -9,7 +9,7 @@ html {
 
     /* table styling */
     #projects {
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
         border-collapse: collapse;
         width: 100%;
       }
@@ -30,3 +30,8 @@ html {
         background-color: #4CAF50;
         color: white;
       }
+
+      /* input styling */
+      input[type="text"] {
+        width: 8vw;
+    }
