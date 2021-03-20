@@ -23,7 +23,7 @@ router.get('/', asyncHandler(async (req, res) => {
 
 /* Create a new project row. */
 router.get('/new', (req, res) => {
-  res.render("projects/index", { project: {}, title: "New Project" });
+  res.render("projects/new", { project: {}, title: "New Project" });
 });
 
 /* POST create project. */
@@ -31,11 +31,11 @@ router.post('/', asyncHandler(async (req, res) => {
   let project;
   try {
     project = await Project.create(req.body);
-    res.redirect("/projects/" + project.id);
+    res.redirect("/projects");
   } catch (error) {
     if(error.name === "SequelizeValidationError") {
       project = await Project.build(req.body);
-      res.render("/", { project, errors: error.errors, title: "New Project" })
+      res.render("projects/new", { project, errors: error.errors, title: "New Project" })
     } else {
       throw error;
     }  
@@ -69,7 +69,7 @@ router.post('/:id/edit', asyncHandler(async (req, res) => {
     project = await Project.findByPk(req.params.id);
     if(project) {
       await project.update(req.body);
-      res.redirect("/projects/" + project.id); 
+      res.redirect("/projects"); 
     } else {
       res.sendStatus(404);
     }

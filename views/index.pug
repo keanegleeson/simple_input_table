@@ -6,46 +6,22 @@ block content
       h3 A simple CRUD app to input renewable energy data. Build on a stack including SQLLite, Express, Node JS, and Sequelize.
 
 
-    form(action='/projects', method='POST')
-    h1 Add a Project
-    p
-      label(for="project_name")| Project Name: 
-      input(type='text', name='project_name', value=project.project_name)
-      |          Technology: 
-      input(type='text', name='technology', value=project.technology)
-      |          Purchase Type: 
-      input(type='text', name='purchase_type', value=project.purchase_type)
-      |          Start Date: 
-      input(type='text', name='start_date', value=project.start_date)
-      |          End Date: 
-      input(type='text', name='end_date', value=project.end_date)
-      |          Usage: 
-      input(type='text', name='usage', value=project.usage)
-      |          Additionality? (y/n): 
-      input(type='text', name='additionality', value=project.additionality)
-    input(type='submit')
+    //- form(action='/projects', method='POST')
+    //- h1 Add a Project
+    //- p
+    //-   label(for="project_name")| Project Name: 
+    //-   input(type='text', name='project_name', value=project.project_name)
+    //-   |          Technology: 
+    //-   input(type='text', name='technology', value=project.technology)
+    //-   |          Purchase Type: 
+    //-   input(type='text', name='purchase_type', value=project.purchase_type)
+    //-   |          Start Date: 
+    //-   input(type='text', name='start_date', value=project.start_date)
+    //-   |          End Date: 
+    //-   input(type='text', name='end_date', value=project.end_date)
+    //-   |          Usage: 
+    //-   input(type='text', name='usage', value=project.usage)
+    //-   |          Additionality? (y/n): 
+    //-   input(type='text', name='additionality', value=project.additionality)
+    //- input(type='submit')
 
-  table#projects 
-    thead(style='width:100%', border='1')
-      tr
-        th Project Name 
-        th Technology 
-        th Purchase Type 
-        th Start Date 
-        th End Date 
-        th Usage 
-        th Additionality? (y/n)
-
-      tr 
-        td Project1 
-        td Wind 
-        td VPPA 
-        td 3/11/2021
-        td 3/11/2025
-        td 500
-        td y 
-
-
-    //- each project in projects
-    //-   project 
-    //-     h1 =project.project_name

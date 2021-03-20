@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+  h2= title
+  
+  include errors
+  
+  form(action="/projects", method="post")
+    div 
+        label(for="project_name") Project Name: 
+        input(type="text", name="project_name" value=project.project_name)
+
+    div 
+        label(for="technology") Technology: 
+        input(type="text", name="technology", value=project.technology)
+
+    div 
+        label(for="technology") Purchase Type: 
+        input(type="text", name="purchase_type", value=project.purchase_type)
+
+    div 
+        label(for="technology") Start Date: 
+        input(type="text", name="start_date", value=project.start_date)
+
+    div 
+        label(for="technology") End Date: 
+        input(type="text", name="end_date", value=project.end_date)
+
+    div 
+        label(for="technology") Usage: 
+        input(type="text", name="usage", value=project.usage)
+
+    div 
+        label(for="technology") Additionality?(y/n): 
+        input(type="text", name="additionality", value=project.additionality)
+
+    input(type='submit')
+    

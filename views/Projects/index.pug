@@ -4,7 +4,11 @@ block content
   div.subheader
     h2 Projects 
 
-
+    form(action="/projects/" , method="post")
+    h1 Add Project
+      a(href="/projects/new", class="btn-new") Create Project &#43;
+    
+    
     table#projects 
       thead(style='width:100%', border='1')
         tr
