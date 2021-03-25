@@ -5,7 +5,7 @@ block content
     h2 Projects 
 
     form(action="/projects/" , method="post")
-    h1 Add Project
+    h1 Add Project  
       a(href="/projects/new", class="btn-new") Create Project &#43;
     
     
@@ -34,3 +34,7 @@ block content
             td
               a( class="btn-new-edit" href="/projects/" + project.id + "/edit") Edit
               a( class="btn-new-delete" href="/projects/" + project.id + "/delete") Delete
+
+    div(class="chart")
+    canvas(id="stackedBar")
+  

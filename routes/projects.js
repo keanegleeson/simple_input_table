@@ -15,18 +15,18 @@ function asyncHandler(cb){
 }
 
 
-/* GET all projects */
+/* GET all projects - R in CRUD - Route 1*/
 router.get('/', asyncHandler(async (req, res) => {
   const projects = await Project.findAll({ order: [["createdAt", "DESC"]] });
   res.render("projects/index", { projects, title: "Renewable Energy Tracking" });
 }));
 
-/* Create a new project row. */
+/* Create a new project form. */
 router.get('/new', (req, res) => {
   res.render("projects/new", { project: {}, title: "New Project" });
 });
 
-/* POST create project. */
+/* POST create project. C in CRUD - Route 2*/
 router.post('/', asyncHandler(async (req, res) => {
   let project;
   try {
@@ -62,7 +62,7 @@ router.get("/:id", asyncHandler(async (req, res) => {
   }
 })); 
 
-/* Update a project. */
+/* Update a project. - U in CRUD - Route 3*/
 router.post('/:id/edit', asyncHandler(async (req, res) => {
   let project;
   try {
@@ -84,7 +84,7 @@ router.post('/:id/edit', asyncHandler(async (req, res) => {
   }
 }));
 
-/* Delete project form. */
+/* Delete project form.*/
 router.get("/:id/delete", asyncHandler(async (req, res) => {
   const project = await Project.findByPk(req.params.id);
   if(project) {
@@ -94,7 +94,7 @@ router.get("/:id/delete", asyncHandler(async (req, res) => {
   }
 }));
 
-/* Delete individual project. */
+/* Delete individual project. -  D in CRUD - Route 4*/
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
   const project = await Project.findByPk(req.params.id);
   if(project) {
