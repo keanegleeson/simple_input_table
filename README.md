@@ -5,7 +5,7 @@ Requirement | Feature
 ------------ | -------------
 Build an ExpressJS Backend Application | The backend of this app uses ExpressJS to serve the application using a local data connection (for now hoping to deploy it using Heroku :))
 Build at least three routes | Have routes made to create a project, read and render all the projects in the database on the page, update a project using the editing feature, and delete a project using the delete button on each row
-Each endpoint must have at least one meaningful unit test (so minimum of three tests) | Have set up unit tests for each endpoint
+Each endpoint must have at least one meaningful unit test (so minimum of three tests) | Have set up unit tests for 3 of the main views/endpoints
 
 
 
@@ -16,3 +16,9 @@ In order to run this project, make sure the below requirements are met:
     - This project uses SQLLite 
 - start the application using npm start
 - open localhost:3000 in your browser to view the front-end
+- run unit tests 
+
+# Next Steps
+- Bulk upload option
+- Deploy using Heroku or some other service
+- Chart the table inputs in some data visualization
