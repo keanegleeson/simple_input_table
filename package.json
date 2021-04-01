@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "mocha"
   },
   "dependencies": {
     "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cookie-parser": "^1.4.5",
     "debug": "^4.3.1",
     "dotenv": "^8.2.0",
@@ -20,6 +22,7 @@
     "sequelize": "^6.5.0",
     "sequelize-cli": "^6.2.0",
     "sinon": "^10.0.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.3"
   }
 }

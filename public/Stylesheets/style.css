@@ -35,8 +35,18 @@ html {
       input[type="text"] {
         width: 8vw;
     }
+    /* Add button style */
+    .btn-new {
+      color:white;
+      background-color: #4CAF50;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      margin-right: 10px;
+       }
 
-
+    .btn-new:hover {
+    color: white;
+    background-color: #96afa4; }
     /* edit/delete button styling */
 
     .btn-new-edit {

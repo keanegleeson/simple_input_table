@@ -7,6 +7,6 @@ block content
     em= project.project_name
     | ?
   form(action="/projects/" + project.id + "/delete", method="post")
-    a(href="/projects/" + project.id) No! Take me back! 
+    a(href="/projects") No! Take me back! 
     | 
     input(type="submit", value = "Yes, I'm sure")
